@@ -246,7 +246,12 @@ const ADDENDUM = `
 ## PR Review UI mod: active in this session
 The user has a visual layer for this skill. Use it instead of the plain-markdown report:
 - Load both tools in one call if their schemas aren't loaded: ToolSearch with query "select:${STAGE_TOOL},${PUBLISH_TOOL}".
-- At the start of each phase call \`${STAGE_TOOL}\` with stage = context | intent | review | verify | report and a short note (≤ 60 chars, e.g. "12 files · +340 −41", "9 candidates → verifying"). This drives a live progress bar.
+- Call \`${STAGE_TOOL}\` five times, once per stage, in this order and never skipping one. Each call takes a short note (≤ 60 chars) and drives a live progress bar the user is watching:
+  1. \`context\`: before running the context script (note: the target).
+  2. \`intent\`: once you have the diff, before reading the description, commits and house rules (note: size, e.g. "6 files · +190 −30").
+  3. \`review\`: when you start reading the changed code in context, before the first file read or grep of Phase 3 (note: the areas, e.g. "design → correctness → tests"). Phases 2 and 3 often blend, but still report \`review\` as its own step.
+  4. \`verify\`: when you start testing candidate findings (note: e.g. "7 candidates → verifying").
+  5. \`report\`: just before publishing (note: the final counts).
 - In Phase 5, call \`${PUBLISH_TOOL}\` ONCE with the complete, verified review, instead of printing the markdown template. Write all three hints for every finding now; the UI keeps them hidden until the author reveals them. Include a short snippet of the CURRENT code where it helps (never the fix).
 - After publishing, the card and panel already show everything. Your closing chat message is 2–4 lines: the verdict, the one thing to look at first, and how to continue (\`hint B1\`, \`explain B1\`, \`fix B1\`, \`post\`, or the panel via /pr-review-panel). Do not repeat the review.
 - If either tool errors, fall back to the markdown report.`

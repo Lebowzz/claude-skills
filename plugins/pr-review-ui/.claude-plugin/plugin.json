@@ -1,6 +1,6 @@
 {
   "name": "pr-review-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Senior-engineer PR review skill (pr-review) that teaches instead of fixing, plus its terminal UI: live progress band, review card and an interactive findings panel with progressive hints.",
   "types": "./types/index.d.ts",
   "author": {
