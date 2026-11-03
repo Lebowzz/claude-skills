@@ -28,7 +28,7 @@ claude plugin install pr-review-ui --marketplace Lebowzz/claude-skills
 
 In the desktop app, where `/plugin` doesn't run: click **+** next to the prompt box, then **Plugins**, **Add marketplace** with `Lebowzz/claude-skills`, then **Add plugin**.
 
-This repository is private. Installing needs read access on GitHub plus a git credential for github.com on your machine (an SSH key, or `gh auth login` then `gh auth setup-git`).
+Needs a recent Claude Code (`claude update` if the install or the UI doesn't work).
 
 ### Use
 
