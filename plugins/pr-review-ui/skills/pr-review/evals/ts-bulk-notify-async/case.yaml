@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: ts-bulk-notify-async
+expected_outcome: |
+  Finds the forEach(async) bug, the missing admin guard (house rule), the swallowed errors (house rule), the per-user lookups vs batch method, and the weak test; teaches through principles and hints.
+context:
+  scaffold_script: place-files.sh

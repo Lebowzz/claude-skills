@@ -1,0 +1,11 @@
+{
+  "name": "claude-skills",
+  "owner": { "name": "Lebowzz" },
+  "plugins": [
+    {
+      "name": "pr-review-ui",
+      "source": "./plugins/pr-review-ui",
+      "description": "Senior-engineer PR review skill that teaches instead of fixing, plus a terminal UI: live progress band, review card and an interactive findings panel with progressive hints."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: nearly-clean-slugify
+expected_outcome: |
+  Recognises a good PR with specific praise, does not invent problems, and ideally spots the truncation edge case where a cut landing exactly on a word boundary drops a whole word.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: python-checkout-security
+expected_outcome: |
+  A teaching review that blocks on SQL injection and the hardcoded key, explains the silent except, notes missing tests, and gives hints rather than a rewritten file.
+context:
+  scaffold_script: place-files.sh
